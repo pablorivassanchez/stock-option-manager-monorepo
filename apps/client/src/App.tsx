@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
-function App() {
+export default function Home() {
   return (
-    <div className="p-6">
-      <Button></Button>Click me
+    <div>
+      <Button>Click me</Button>
     </div>
   );
 }
-
-export default App;

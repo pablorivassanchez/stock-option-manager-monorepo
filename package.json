@@ -4,7 +4,12 @@
   "main": "index.js",
   "scripts": {
     "dev:client": "pnpm --filter client dev",
-    "dev:server": "pnpm --filter server start-ts"
+    "dev:server": "pnpm --filter server start-ts",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint:client": "cd apps/client && eslint .",
+    "lint:server": "cd apps/server && eslint ."
   },
   "workspaces": [
     "apps/client",
@@ -12,5 +17,13 @@
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.10.0",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
+  }
 }
